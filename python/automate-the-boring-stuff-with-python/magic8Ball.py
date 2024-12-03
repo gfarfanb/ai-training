@@ -1,6 +1,8 @@
 import random
 
-def getAnswer(answerNumber):
+def getAnswer():
+    answerNumber = random.randint(1, 9)
+
     if answerNumber == 1:
         return 'It is certain'
     elif answerNumber == 2:
@@ -20,6 +22,23 @@ def getAnswer(answerNumber):
     elif answerNumber == 9:
         return 'Very doubtful'
 
-r = random.randint(1, 9)
-fortune = getAnswer(r)
-print(fortune)
+def getAnswerFromList():
+    messages = [
+        'It is certain',
+        'It is decidedly so',
+        'Yes definitely',
+        'Reply hazy try again',
+        'Ask again later',
+        'Concentrate and ask again',
+        'My reply is no',
+        'Outlook not so good',
+        'Very doubtful'
+    ]
+
+    return messages[random.randint(0, len(messages) - 1)]
+
+for i in range(10):
+    answer = getAnswer()
+    answerList = getAnswerFromList()
+
+    print(str(answer == answerList) + ' - [' + answer + ", " + answerList + "]")

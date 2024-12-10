@@ -3,42 +3,22 @@
 
 ## Installation
 
-Install Ubuntu packages for Python Virtual Environments
-```sh
-sudo apt install python3-venv
-```
-
 [Install Node.js on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04)
 
-Create Virtual Environment (**venv**)
+Install packages
 ```sh
+sudo apt install python3-venv
+
 cd ~/courses
 # Create course directory
 mkdir huggingface
-# Create 'venv'
-python -m venv .env
-# Activate 'venv'
-source .env/bin/activate
-# Confirm if 'venv' is active
-which python
-# /home/<USER>/courses/huggingface/.env/bin/python
-```
 
-Install python dependencies
-```sh
+python -m venv .venv
+source .venv/bin/activate
+
 pip install transformers
 ```
 
-Activate **venv**
-```sh
-cd ~/courses/huggingface
-source .env/bin/activate
-```
-
-Once **venv** is activated you can deactivate it by typing in the terminal
-```sh
-deactivate
-```
 
 # Practical Deep Learning for Coders
 
@@ -46,6 +26,9 @@ deactivate
 
 Install python dependencies
 ```sh
+python -m venv .venv
+source .venv/bin/activate
+
 pip install fastai
 pip install jupyterlab
 pip install ipywidgets

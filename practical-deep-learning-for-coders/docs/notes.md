@@ -33,8 +33,6 @@ Activate **venv**
 ```sh
 cd ~/courses/huggingface
 source .env/bin/activate
-# Do something....
-deactivate
 ```
 
 Once **venv** is activated you can deactivate it by typing in the terminal
